@@ -16,10 +16,12 @@ default_section = "THIRDPARTY"
 name = "python_project_template"
 version = "0.1.0"
 description = "Template for python projects"
+authors = []
 
 [tool.poetry.dependencies]
-python = "3.8.6"
+python = "3.9.1"
 prettyconf = "*"
+Django = "^3.2.4"
 
 [tool.poetry.dev-dependencies]
 coverage = "*"
@@ -27,9 +29,9 @@ ipdb = "*"
 ipython = "*"
 pre-commit = "*"
 pytest = "*"
-pytest-asyncio = "*"
 pytest-cov = "*"
 pytest-deadfixtures = "*"
-pytest-envvars = "*"
 pytest-randomly = "*"
 safety = "*"
+pytest-benchmark = "^3.4.1"
+factory-boy = "^3.2.0"
