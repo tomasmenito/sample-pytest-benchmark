@@ -12,6 +12,10 @@ known_local_folder = "apps,utils,tests,python_project_template"
 sections = "FUTURE,STDLIB,THIRDPARTY,FIRSTPARTY,LOCALFOLDER"
 default_section = "THIRDPARTY"
 
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "sample_store.settings"
+python_files = ["tests.py", "test_*.py", "*_tests"]
+
 [tool.poetry]
 name = "python_project_template"
 version = "0.1.0"
@@ -37,3 +41,6 @@ pytest-randomly = "*"
 safety = "*"
 pytest-benchmark = "^3.4.1"
 factory-boy = "^3.2.0"
+flake8 = "^3.9.2"
+black = "^21.6b0"
+pytest-django = "^4.4.0"
