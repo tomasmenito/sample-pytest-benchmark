@@ -16,3 +16,8 @@ class TestRaiseSalary:
         raise_salaries()
         employee.refresh_from_db()
         assert employee.salary == expected_raised_salary
+
+    def test_performance(self, benchmark):
+        EmployeeFactory.create_batch(500)
+
+        benchmark(raise_salaries)
