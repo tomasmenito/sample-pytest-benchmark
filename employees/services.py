@@ -1,12 +1,9 @@
-from decimal import Decimal
-
 from django.db import transaction
+from django.db.models import F
 
 from .models import Employee
 
 
 def raise_salaries():
     with transaction.atomic():
-        for employee in Employee.objects.all():
-            employee.salary *= Decimal("1.1")
-            employee.save()
+        Employee.objects.update(salary=F("salary") * 1.1)
