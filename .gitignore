@@ -67,3 +67,6 @@ target/
 
 #pyenv local settings
 .python-version
+
+# pytest-benchmark files
+.benchmarks
