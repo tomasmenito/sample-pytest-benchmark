@@ -15,7 +15,7 @@ default_section = "THIRDPARTY"
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "sample_store.settings"
 python_files = ["tests.py", "test_*.py", "*_tests"]
-addopts = "--benchmark-skip --benchmark-save=sample_store"
+addopts = "--benchmark-skip"
 
 [tool.poetry]
 name = "python_project_template"

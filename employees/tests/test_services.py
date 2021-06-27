@@ -6,7 +6,7 @@ from employees.services import raise_salaries
 from employees.tests.factories import EmployeeFactory
 
 
-@pytest.mark.django_db
+@pytest.mark.django_db(transaction=True)
 class TestRaiseSalary:
     def test_raise_salary(self):
         salary = Decimal("100")

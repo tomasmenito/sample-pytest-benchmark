@@ -29,8 +29,8 @@ pyformat:
 lint:
 	poetry run pre-commit install && poetry run pre-commit run -a -v
 
-test:
-	poetry run pytest
-
-test-performance:
-	poetry run pytest --benchmark-only
+performance-compare-main:
+	git checkout main
+	poetry run pytest --benchmark-only --benchmark-save=sample_store --benchmark-verbose
+	git checkout -
+	poetry run pytest --benchmark-only --benchmark-compare --benchmark-verbose
