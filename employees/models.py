@@ -8,4 +8,4 @@ class Employee(models.Model):
     name = models.CharField(null=False, max_length=100)
     address = models.TextField(null=False, max_length=500)
     phone_number = models.CharField(null=False, max_length=50)
-    salary = models.DecimalField(null=False, decimal_places=2, max_digits=6)
+    salary = models.DecimalField(null=False, decimal_places=2, max_digits=8)
